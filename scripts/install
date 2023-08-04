@@ -44,6 +44,9 @@ chown -R $app:www-data "$data_dir"
 #=================================================
 ynh_script_progression --message="Adding a configuration file..."
 
+key=$(ynh_string_random --length=45 | base64)
+ynh_app_setting_set --app=$app --key=key --value=$key
+
 ynh_add_config --template="../conf/.env" --destination="$install_dir/.env"
 
 chmod 600 "$install_dir/.env"
