@@ -47,11 +47,9 @@ ram.runtime = "50M"
         extract = true
         prefetch = false
 
-        amd64.url = "tombursch/kitchenowl:v75"
-        amd64.sha256 = "ff07deed98226f25113c294a82c9ba0756dcb007266d9581f4533e126a689be0"
-        
-        arm64.url = "tombursch/kitchenowl:v75"
-        arm64.sha256 = "32fb1a4df1bf859d35b37d62a80d38cef0630c724488c5fdc9903e5be1a117f0"
+        url = "https://github.com/TomBursch/kitchenowl/releases/download/v0.4.8/kitchenowl_Linux.tar.gz"
+        sha256 = "7733d3a90aa5b1d6751ebb5ddabe8cce6ae558414f7d2959a6cc5939d5a0866d"
+        autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
 
