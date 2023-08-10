@@ -43,9 +43,6 @@ ram.runtime = "50M"
 [resources]
     [resources.sources]
         [resources.sources.main]
-        format = "docker"
-        extract = true
-        prefetch = false
 
         url = "https://github.com/TomBursch/kitchenowl/releases/download/v0.4.8/kitchenowl_Linux.tar.gz"
         sha256 = "7733d3a90aa5b1d6751ebb5ddabe8cce6ae558414f7d2959a6cc5939d5a0866d"
