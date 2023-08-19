@@ -23,7 +23,8 @@ ynh_add_nginx_config
 
 ynh_script_progression --message="Adding a configuration file..."
 
-ynh_setup_source --dest_dir="$install_dir/"
+ynh_setup_source --dest_dir="$install_dir/frontapi" --source_id="front"
+ynh_setup_source --dest_dir="$install_dir/backend" --source_id="backend"
 
 key=$(ynh_string_random --length=45 | base64)
 ynh_app_setting_set --app=$app --key=key --value=$key
@@ -49,11 +50,9 @@ set -a; source "$install_dir/.env"; set +a
 ynh_script_progression --message="Installing Python dependencies..." --weight=3
 
 pushd $install_dir
-	python3 -m venv $install_dir/venv
-	source $install_dir/venv/bin/activate
+	python3 -m venv $install_dir/backend/venv
+	source $install_dir/backend/venv/bin/activate
 	ynh_exec_warn_less pip3 install -r requirements.txt
-    flask db upgrade
-    python3 wsgi.py
 popd
 
 #=================================================
