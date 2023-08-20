@@ -50,8 +50,8 @@ ram.runtime = "50M"
 
 
         [resources.sources.backend]
-        url = "https://github.com/TomBursch/kitchenowl-backend/archive/542bfea699952bb6a7ef9296db5bc08585c9947a.zip"
-        sha256 = "3d1cf2d7631283d83eafdbcf77fa5ccdd3f4315b1a5b188e4c57acaebc39f4c4"
+        url = "https://github.com/TomBursch/kitchenowl-backend/archive/refs/tags/v75.tar.gz"
+        sha256 = "8785e1b374049b079f1398c57ad444e44545311eb7d4d6184d4fa0d3fbf8f931"
         autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
