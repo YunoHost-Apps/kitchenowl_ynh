@@ -44,8 +44,8 @@ ram.runtime = "50M"
     [resources.sources]
         [resources.sources.front]
 
-        url ="https://github.com/TomBursch/kitchenowl/releases/download/v0.4.8/kitchenowl_Web.tar.gz"
-        sha256 ="d2a6e6d11c84db30671335d3ea2acdf7928ded59934e3c62c1cc666f9417c1fa"
+        url ="https://github.com/TomBursch/kitchenowl/releases/download/v0.4.12/kitchenowl_Web.tar.gz"
+        sha256 ="1b1f73c57dbffe926598ac7f673de95f6b1b6713f6103559b7c7b78ec984855b"
         autoupdate.strategy = "latest_github_tag"
 
 
