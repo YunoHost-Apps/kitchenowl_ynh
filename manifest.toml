@@ -5,7 +5,7 @@ name = "KitchenOwl"
 description.en = "Self-hosted grocery list and recipe manager"
 description.fr = "Gestionnaire de listes de courses et de recettes auto-hébergé"
 
-version = "0.4.7~ynh1"
+version = "0.4.12~ynh1"
 
 maintainers = ["Thovi98"]
 
@@ -43,7 +43,6 @@ ram.runtime = "50M"
 [resources]
     [resources.sources]
         [resources.sources.front]
-
         url ="https://github.com/TomBursch/kitchenowl/releases/download/v0.4.12/kitchenowl_Web.tar.gz"
         sha256 ="1b1f73c57dbffe926598ac7f673de95f6b1b6713f6103559b7c7b78ec984855b"
         autoupdate.strategy = "latest_github_tag"

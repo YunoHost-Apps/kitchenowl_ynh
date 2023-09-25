@@ -17,7 +17,6 @@ source /usr/share/yunohost/helpers
 ynh_script_progression --message="Stopping a systemd service..." --weight=1
 
 ynh_systemd_action --action="stop" --service_name="${app}" 
-ynh_systemd_action --action="stop" --service_name="${app}_workers"
 
 #=================================================
 # MODIFY URL IN NGINX CONF
@@ -32,7 +31,7 @@ ynh_change_url_nginx_config
 ynh_script_progression --message="Modifying a config file..." --weight=1
 
 domain=$new_domain
-ynh_add_config --template="../conf/env.production" --destination="$install_dir/config/.env"
+ynh_add_config --template="../conf/env.production" --destination="$install_dir/.env"
 
 #=================================================
 # START SYSTEMD SERVICE
@@ -41,7 +40,6 @@ ynh_script_progression --message="Starting the systemd services..." --weight=15
 
 # Start a systemd service
 ynh_systemd_action --service_name="${app}" --action="start"  
-ynh_systemd_action --service_name="${app}_workers" --action="start" 
 
 #=================================================
 # END OF SCRIPT
