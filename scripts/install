@@ -52,7 +52,7 @@ ynh_script_progression --message="Installing Python dependencies..." --weight=3
 pushd $install_dir/backend
 	python3 -m venv $install_dir/backend/venv
 	source $install_dir/backend/venv/bin/activate
-        ynh_exec_warn_less pip3 install --upgrade pip yaml
+        ynh_exec_warn_less pip3 install --upgrade pip pyyaml
 	ynh_exec_warn_less pip3 install -r requirements.txt
 popd
 
