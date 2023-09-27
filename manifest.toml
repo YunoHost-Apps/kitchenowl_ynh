@@ -5,7 +5,7 @@ name = "KitchenOwl"
 description.en = "Self-hosted grocery list and recipe manager"
 description.fr = "Gestionnaire de listes de courses et de recettes auto-hébergé"
 
-version = "0.4.7~ynh1"
+version = "0.4.12~ynh1"
 
 maintainers = ["Thovi98"]
 
@@ -42,16 +42,16 @@ ram.runtime = "50M"
 
 [resources]
     [resources.sources]
-        [resources.sources.main]
-        format = "docker"
-        extract = true
-        prefetch = false
+        [resources.sources.front]
+        url ="https://github.com/TomBursch/kitchenowl/releases/download/v0.4.12/kitchenowl_Web.tar.gz"
+        sha256 ="1b1f73c57dbffe926598ac7f673de95f6b1b6713f6103559b7c7b78ec984855b"
+        autoupdate.strategy = "latest_github_tag"
 
-        amd64.url = "tombursch/kitchenowl:v75"
-        amd64.sha256 = "ff07deed98226f25113c294a82c9ba0756dcb007266d9581f4533e126a689be0"
-        
-        arm64.url = "tombursch/kitchenowl:v75"
-        arm64.sha256 = "32fb1a4df1bf859d35b37d62a80d38cef0630c724488c5fdc9903e5be1a117f0"
+
+        [resources.sources.backend]
+        url = "https://github.com/TomBursch/kitchenowl-backend/archive/refs/tags/v77.tar.gz"
+        sha256 = "2f11823f31e652bec7d1cbf4b17c034039bca06424936d63de818b2fa5ce60ab"
+        autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
 
@@ -65,7 +65,7 @@ ram.runtime = "50M"
     [resources.ports]
 
     [resources.apt]
-    packages = "postgresql, postgresql-contrib"
+    packages = "postgresql, postgresql-contrib, python3-dev, python3-venv"
 
     [resources.database]
     type = "postgresql"

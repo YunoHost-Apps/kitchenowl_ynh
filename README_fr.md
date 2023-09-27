@@ -29,7 +29,7 @@ N'oubliez pas que ce projet est encore en cours de développement.
 
 Pour une liste complète, consultez le site web. Pour une liste des fonctionnalités prévues, consultez la feuille de route !
 
-**Version incluse :** 0.4.7~ynh1
+**Version incluse :** 0.4.12~ynh1
 
 **Démo :** https://app.kitchenowl.org/
 

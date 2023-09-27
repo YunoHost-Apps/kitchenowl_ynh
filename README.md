@@ -29,7 +29,7 @@ Please keep in mind that this project is still in development.
 
 For a full list check out the website. For a list of planned features, take a look at the Roadmap!
 
-**Shipped version:** 0.4.7~ynh1
+**Shipped version:** 0.4.12~ynh1
 
 **Demo:** https://app.kitchenowl.org/
 
