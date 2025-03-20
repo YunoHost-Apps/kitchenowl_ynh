@@ -46,30 +46,24 @@ ram.runtime = "50M"
 [resources]
     [resources.sources]
         [resources.sources.main]
-        format = "docker"
-        extract = true
-        prefetch = false
 
-        amd64.url = "tombursch/kitchenowl:v75"
-        amd64.sha256 = "ff07deed98226f25113c294a82c9ba0756dcb007266d9581f4533e126a689be0"
+        url = "https://github.com/TomBursch/kitchenowl/releases/download/v0.6.11/kitchenowl_Web.tar.gz"
+        sha256 = "7cb7acecc0d70f77f26c69eec5725620d3c945b6b4433953fff6457de03551a4"
         
-        arm64.url = "tombursch/kitchenowl:v75"
-        arm64.sha256 = "32fb1a4df1bf859d35b37d62a80d38cef0630c724488c5fdc9903e5be1a117f0"
-
     [resources.system_user]
 
     [resources.install_dir]
     group = "www-data:r-x"
    
-    [resources.data_dir]
+    #[resources.data_dir]
 
     [resources.permissions]
     main.url = "/"
 
-    [resources.ports]
+    #[resources.ports]
 
-    [resources.apt]
-    packages = "postgresql, postgresql-contrib"
+    #[resources.apt]
+    #packages = "postgresql, postgresql-contrib"
 
-    [resources.database]
-    type = "postgresql"
+    #[resources.database]
+    #type = "postgresql"

@@ -8,17 +8,17 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Making install..."
 
-ynh_setup_source --dest_dir="$install_dir/"
+ynh_setup_source --dest_dir="$install_dir"
 
 #=================================================
 # ADD A CONFIGURATION
 #=================================================
-ynh_script_progression "Adding $app's configuration..."
+#ynh_script_progression "Adding $app's configuration..."
 
-key=$(ynh_string_random --length=45 | base64)
-ynh_app_setting_set --key=key --value=$key
+#key=$(ynh_string_random --length=45 | base64)
+#ynh_app_setting_set --key=key --value=$key
 
-ynh_config_add --template=".env" --destination="$install_dir/.env"
+#ynh_config_add --template=".env" --destination="$install_dir/.env"
 
 #=================================================
 # SETUP SYSTEMD
@@ -29,12 +29,12 @@ ynh_script_progression "Configuring $app's systemd service..."
 ynh_config_add_nginx
 
 # Create a dedicated systemd config
-ynh_config_add_systemd
+#ynh_config_add_systemd
 
 # Use logrotate to manage application logfile(s)
-ynh_config_add_logrotate
+#ynh_config_add_logrotate
 
-yunohost service add $app --description="KitchenOwl main service" --log="/var/log/$app/$app.log"
+#yunohost service add $app --description="KitchenOwl main service" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE
@@ -42,7 +42,7 @@ yunohost service add $app --description="KitchenOwl main service" --log="/var/lo
 ynh_script_progression "Starting $app's systemd service..."
 
 # Start a systemd service
-ynh_systemctl --service=$app --action="start"
+#ynh_systemctl --service=$app --action="start"
 
 #=================================================
 # END OF SCRIPT
