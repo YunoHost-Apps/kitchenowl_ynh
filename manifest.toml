@@ -45,10 +45,11 @@ ram.runtime = "50M"
 
 [resources]
     [resources.sources]
-        [resources.sources.main]
 
-        url = "https://github.com/TomBursch/kitchenowl/releases/download/v0.6.11/kitchenowl_Web.tar.gz"
-        sha256 = "7cb7acecc0d70f77f26c69eec5725620d3c945b6b4433953fff6457de03551a4"
+    [resources.sources.main]
+    in_subdir = false
+    url = "https://github.com/TomBursch/kitchenowl/releases/download/v0.6.11/kitchenowl_Web.tar.gz"
+    sha256 = "7cb7acecc0d70f77f26c69eec5725620d3c945b6b4433953fff6457de03551a4"
         
     [resources.system_user]
 
